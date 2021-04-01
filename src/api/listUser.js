@@ -1,15 +1,12 @@
 import request from "../services/request";
 import constantApi from "../constants/constantApi";
 
-
-const getListTodoUsers = params => {
+const getListTodoUsers = (params) => {
   return request({
-    url: constantApi.BASE_API,
+    url: `${constantApi.apiBaseUrl} + /user`,
     method: "GET",
-    params: params
+    params: params,
   });
 };
 
-export {
-  getListTodoUsers
-}
+export { getListTodoUsers };
